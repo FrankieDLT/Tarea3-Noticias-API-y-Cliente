@@ -1,0 +1,28 @@
+<h2>{{name}}</h2>
+<!-- <ul>
+    <li *ngFor="let item of news">
+        <a routerLink="{{item.url}}"><!--.url/.id-->
+            <!-- <img *ngIf="item.urlToImage" src="{{item.urlToImage}}" alt="news image">
+            {{item.title}}
+        </a>
+    </li> 
+</ul>  -->
+<form (submit)="doSearch()">
+<input name="buscar" type="text" [(ngModel)]="search" placeholder="Buscar">
+<button>Buscar</button>
+</form>
+
+<!-- <div *ngIf="news.length==0">
+<p>No hay elementos</p>
+</div>
+
+<div class="grid" >
+    <div class="sm-50 md-25" *ngFor="let item of news">
+      <a routerLink="{{item.id}}">url
+        <img src="{{item.urlToImage || 'https://via.placeholder.com/300'}}" alt="news image">
+          {{item.title}}
+        </a>
+    </div>
+  </div> -->
+
+  <app-grid-list [items]="news" ></app-grid-list>

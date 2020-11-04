@@ -1,0 +1,13 @@
+<div *ngIf="items.length==0">
+  <p>No hay elementos</p>
+  </div>
+  
+  <div class="grid" >
+      <div class="sm-50 md-25" *ngFor="let item of items" >
+        <a routerLink="{{item.id}}" (click)="handleClick(item)"><!--url-->
+          <img src="{{item.urlToImage || 'https://via.placeholder.com/300'}}" alt="news image">
+            {{item.title}}
+          </a>
+      </div>
+    </div>
+  

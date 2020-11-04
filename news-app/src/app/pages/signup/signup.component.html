@@ -1,0 +1,26 @@
+<p>Registro</p>
+
+<form [formGroup]="form" (submit)="CrearUsuario()">
+    <div>
+        <label for="name">Nombre</label>
+        <input type="text" name="name" formControlName="name">
+    </div>
+    <div>
+        <label for="email">Correo</label>
+        <input type="email" name="email" formControlName="email">
+    </div>
+    <div>
+        <label for="password">Constraseña</label>
+        <input type="password" name="password" formControlName="password">
+    </div>
+    <div>
+        <label for="confirm">Confirmar Constraseña</label>
+        <input type="password" name="confirm" formControlName="confirm">
+    </div>
+    <div>
+        <strong>{{form.valid}}</strong>
+    </div>
+    <div>
+        <button>Enviar</button>
+    </div>
+</form>

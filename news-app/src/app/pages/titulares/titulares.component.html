@@ -1,0 +1,21 @@
+<h2>Titulares</h2>
+<!-- [] binding propiedad, no se refresca -->
+<!-- () binfing de evento, si se refresca -->
+<select [(ngModel)]="country" (change)="onCountryChange()">
+    <option value="">Selecciona un País</option>
+    <option value="mx">Mexico</option>
+    <option value="us">USA</option>
+
+</select>
+
+<!-- <div class="grid">
+    <div class="sm-50 md-25" *ngFor="let item of headlines">
+        <a href="{{item.url}}">
+            <img src="{{item.urlToImage}}" alt="">
+            {{item.title}}
+        </a>
+
+    </div>
+</div> -->
+
+ <app-grid-list [items]="headlines" (onChildClick)="onItemClick($event)"></app-grid-list> <!---->
